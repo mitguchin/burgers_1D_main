@@ -13,7 +13,7 @@ $$\frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} = \nu \frac{\p
 Neural Network Architecture
 
 1) Structure: A Multi-Layer Perceptron(MLP) with 2 inputs ($x,t$) and 1 output ($u$).
-2) Depth: 5 hidden layers with 20-30 neurons each.
+2) Depth: 5 hidden layers with 20~30 neurons each.
 3) Activation: Tanh(Hyperbolic Tangent) was choosen to ensure smooth higher-order derivatives,which is critical for calculating the Laplacian
 ($\frac{\partial^2 u} {\partial x^2}$) in the PDE loss.
 
@@ -36,6 +36,14 @@ A second-order optimizer that utilizes curvature information to achieve high-pre
 
 3. Result & Visulization
 The trained model successfully captures shock wave formation, a hallmark of the Burgers' equation where the wave steepens over time.
+
+* Heatmap (u distribution): Visualizes the velocity field $u$ across space ($x$) and time($t$), showing the non-linear advection process.
+* Line plots: Cross-sections at specific time steps confirm the sharpening of the wave profile into a shock.
+
+4. Implementation Details
+* Framework: PyTorch(with CUDA support for GPU acceleration).
+* Key Libraries: NumPy for data handling, Matplotlib/Seaborn for high-fidelity scientific visualization, and TQDM for progress tracking.
+* Precision: High-resolution grids($h = 0.01, k=0.01$) were used for final inference to validate the model's continuity.
 
 
 
