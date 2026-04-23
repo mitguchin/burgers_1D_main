@@ -1,5 +1,6 @@
 # burgers_1D_main
 
+
 1. Problem Statement:Burgers'Equation
 
 $$\frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} = \nu \frac{\partial^2 u}{\partial x^2}$$
@@ -7,6 +8,7 @@ $$\frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} = \nu \frac{\p
 1) Viscosity Coefficient ($\nu$): $0.01/\pi$.
 2) Initial Condition (IC): $u(x,0) = -\sin(\pi x)$.
 3) Boundary Conditions(BC): $u(-1,t) = u(1,t) = 0$.
+
 
 2. Technical Highlights
 
@@ -28,17 +30,21 @@ Using PyTorch's Automatic Differentiation(Autograd), the physical residuals are 
 * Two-stage Optimization Strategy
 : A Hybrid optimization approach was implemented to balance speed and precision:
 
+
 1. Adam Optimizer:
 Used in initial phase to navigate the loss landscape quickly and reach the global minimum vicinity.
 
+
 2. L-BFGS Optimizer:
 A second-order optimizer that utilizes curvature information to achieve high-precision convergence in the final stages of traning.
+
 
 3. Result & Visulization
 The trained model successfully captures shock wave formation, a hallmark of the Burgers' equation where the wave steepens over time.
 
 * Heatmap (u distribution): Visualizes the velocity field $u$ across space ($x$) and time($t$), showing the non-linear advection process.
 * Line plots: Cross-sections at specific time steps confirm the sharpening of the wave profile into a shock.
+
 
 4. Implementation Details
 * Framework: PyTorch(with CUDA support for GPU acceleration).
