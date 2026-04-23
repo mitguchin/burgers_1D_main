@@ -18,11 +18,24 @@ Neural Network Architecture
 ($\frac{\partial^2 u} {\partial x^2}$) in the PDE loss.
 
 * Physics-Informed Training(Autograd)
+
 Using PyTorch's Automatic Differentiation(Autograd), the physical residuals are directly optimized:
 
 1) PDE Loss: Minimizes the residual of the Burgers' equation across the entire computational domain.
 2) Data Loss: Minimizes the prediction error at the initial and boundary points.
-- Total Loss: $Loss_{Total} = Loss_{Data} + Loss_{PDE}$
+3) Total Loss: $Loss_{Total} = Loss_{Data} + Loss_{PDE}$
+
+* Two-stage Optimization Strategy
+: A Hybrid optimization approach was implemented to balance speed and precision:
+
+1. Adam Optimizer:
+Used in initial phase to navigate the loss landscape quickly and reach the global minimum vicinity.
+
+2. L-BFGS Optimizer:
+A second-order optimizer that utilizes curvature information to achieve high-precision convergence in the final stages of traning.
+
+3. Result & Visulization
+The trained model successfully captures shock wave formation, a hallmark of the Burgers' equation where the wave steepens over time.
 
 
 
