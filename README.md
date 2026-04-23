@@ -17,10 +17,12 @@ Neural Network Architecture
 3) Activation: Tanh(Hyperbolic Tangent) was choosen to ensure smooth higher-order derivatives,which is critical for calculating the Laplacian
 ($\frac{\partial^2 u} {\partial x^2}$) in the PDE loss.
 
-# Physics-Informed Training(Autograd)
+* Physics-Informed Training(Autograd)
 Using PyTorch's Automatic Differentiation(Autograd), the physical residuals are directly optimized:
 
 1) PDE Loss: Minimizes the residual of the Burgers' equation across the entire computational domain.
 2) Data Loss: Minimizes the prediction error at the initial and boundary points.
-* Total Loss: $Loss_{Total} = Loss_{Data} + Loss_{PDE}$.
+- Total Loss: $Loss_{Total} = Loss_{Data} + Loss_{PDE}$
+
+
 
