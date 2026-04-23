@@ -20,4 +20,7 @@ Neural Network Architecture
 # Physics-Informed Training(Autograd)
 Using PyTorch's Automatic Differentiation(Autograd), the physical residuals are directly optimized:
 
-PDE Loss: Minimizes the residual of the Burgers' equation across the entire computational domain.
+1) PDE Loss: Minimizes the residual of the Burgers' equation across the entire computational domain.
+2) Data Loss: Minimizes the prediction error at the initial and boundary points.
+* Total Loss: $Loss_{Total} = Loss_{Data} + Loss_{PDE}$.
+
