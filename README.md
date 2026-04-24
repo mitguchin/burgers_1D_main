@@ -45,8 +45,8 @@ The following visualization displays the training loss history and the resulting
 
 
 ![Burgers 1D Training & Flow Field]
-<img width="1449" height="666" alt="Data1" src="https://github.com/user-attachments/assets/9e1cf14d-154e-4590-b76e-1bc69ca5e39d" />
-(images/Data1.jpg)
+<img width="856" height="348" alt="Data1" src="https://github.com/user-attachments/assets/7c295483-adf5-42ad-8a9a-e658e22a4a5c" />
+
 
 
 
