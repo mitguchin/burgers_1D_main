@@ -40,10 +40,16 @@ A second-order optimizer that utilizes curvature information to achieve high-pre
 
 
 3. Result & Visulization
-The trained model successfully captures shock wave formation, a hallmark of the Burgers' equation where the wave steepens over time.
 
-* Heatmap (u distribution): Visualizes the velocity field $u$ across space ($x$) and time($t$), showing the non-linear advection process.
-* Line plots: Cross-sections at specific time steps confirm the sharpening of the wave profile into a shock.
+The following visualization displays the training loss history and the resulting velocity field for the 1D Burgers' equation.
+
+
+![Burgers 1D Training & Flow Field](images/Data1.jpg)
+
+
+**Left**: Training loss convergence showing a stable optimization process.
+
+**Right**: Predicted velocity distribution $u(x,t)$ within the spatial-temporal domain.
 
 
 4. Implementation Details
