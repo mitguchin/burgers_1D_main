@@ -15,8 +15,8 @@ $$\frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} = \nu \frac{\p
 Neural Network Architecture
 
 - Structure: A Multi-Layer Perceptron(MLP) with 2 inputs ($x,t$) and 1 output ($u$)
--  Depth: 5 hidden layers with 20~30 neurons each.
-- ctivation: Tanh(Hyperbolic Tangent) was choosen to ensure smooth higher-order derivatives,which is critical for calculating the Laplacian
+- Depth: 5 hidden layers with 20~30 neurons each.
+- Activation: Tanh(Hyperbolic Tangent) was choosen to ensure smooth higher-order derivatives,which is critical for calculating the Laplacian
 ($\frac{\partial^2 u} {\partial x^2}$) in the PDE loss.
 
 * Physics-Informed Training(Autograd)
@@ -44,7 +44,6 @@ A second-order optimizer that utilizes curvature information to achieve high-pre
 The following visualization displays the training loss history and the resulting velocity field for the 1D Burgers' equation.
 
 
-![Burgers 1D Training & Flow Field]
 <img width="856" height="348" alt="Data1" src="https://github.com/user-attachments/assets/7c295483-adf5-42ad-8a9a-e658e22a4a5c" />
 
 
