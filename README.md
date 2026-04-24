@@ -44,7 +44,10 @@ A second-order optimizer that utilizes curvature information to achieve high-pre
 The following visualization displays the training loss history and the resulting velocity field for the 1D Burgers' equation.
 
 
-![Burgers 1D Training & Flow Field](images/Data1.jpg)
+![Burgers 1D Training & Flow Field]
+<img width="1449" height="666" alt="Data1" src="https://github.com/user-attachments/assets/9e1cf14d-154e-4590-b76e-1bc69ca5e39d" />
+(images/Data1.jpg)
+
 
 
 **Left**: Training loss convergence showing a stable optimization process.
